@@ -1,11 +1,9 @@
 <template>
-  <pv-sidebar v-bind:visble="visible">
+  <pv-sidebar v-bind:visible="visible">
     <div v-for="source in sources" class ="m-4">
       <div @click="onSourceSelected(source)" class="flex align-content-start flex-wrap">
-        <span class="flex align-items-center justify-content-center margin-right-2">
-        <pv-avatar :image="source.urlToLogo"
-                   :arial-lable="source.name"
-                   shape="circle"/>
+        <span class="flex align-items-center justify-content-center mr-2">
+          <pv-avatar :image="source.urlToLogo" :arial-lable="source.name" shape="circle"/>
         </span>
         <span class="flex align-items-center justify-content-center">
           {{ source.name }}
@@ -50,10 +48,7 @@ export default {
     },
     isVisible() {
       return this.visible;
-    },
+    }
   }
 }
 </script>
-<style scoped>
-
-</style>

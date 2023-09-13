@@ -3,20 +3,22 @@
     <div>
       <pv-menubar class="sticky bg-primary">
         <template #start>
-          <pv-button lable="CatchUp" icon="pi pi-bars" @click ="toggleSidebar"></pv-button>
+          <pv-button label="CatchUp" icon="pi pi-bars" @click ="toggleSidebar"></pv-button>
           <side-menu v-model:visible="sidebarVisible" v-on:source-selected="setSource"></side-menu>
         </template>
       </pv-menubar>
     </div>
   </div>
+  <main-content :articles="articles"></main-content>
 </template>
 <script>
   import {NewsApiService} from "./news/services/news-api.service.js";
   import SideMenu from "./news/components/side-menu.component.vue";
+  import MainContent from "./news/components/main-content.component.vue";
 
   export default {
     name: 'App',
-    components: {SideMenu},
+    components: {MainContent, SideMenu},
     data() {
       return {
         sidebarVisible: false,
