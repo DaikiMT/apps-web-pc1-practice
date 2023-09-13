@@ -29,10 +29,12 @@
 </template>
 
 <script>
+import {Article} from "../model/article.entity.js";
+
 export default {
   name: "article-card",
   props: {
-    article: null,
+    article: Article,
   }
 }
 </script>
