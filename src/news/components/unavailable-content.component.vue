@@ -3,6 +3,7 @@
     <h4>{{ $t('unavailable-news')}}</h4>
     <div v-for="error in errors">
       <h6>{{ error }}</h6>
+    </div>
   </div>
 </template>
 
